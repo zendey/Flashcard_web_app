@@ -1,0 +1,6 @@
+pasta	p-sounds/pasta.jpg	p-sounds/pasta.mp3
+peas	p-sounds/peas.jpg	p-sounds/peas.mp3
+pepper	p-sounds/pepper.jpg	p-sounds/pepper.mp3
+plane	p-sounds/plane.jpg	p-sounds/plane.mp3
+plate	p-sounds/plate.jpg	p-sounds/plate.mp3
+play	p-sounds/play.jpg	p-sounds/play.mp3

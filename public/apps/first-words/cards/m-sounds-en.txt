@@ -1,0 +1,5 @@
+mama	m-sounds/mama.jpg	m-sounds/mama.mp3
+milk	m-sounds/milk.jpg	m-sounds/milk.mp3
+moon	m-sounds/moon.jpg	m-sounds/moon.mp3
+more	m-sounds/more.jpg	m-sounds/more.mp3
+mountain	m-sounds/mountain.jpg	m-sounds/mountain.mp3

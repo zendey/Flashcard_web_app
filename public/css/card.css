@@ -1,0 +1,50 @@
+#card {
+	background-color: #ffffff;
+	-webkit-transform-style: preserve-3d;	// To preserve sharpness.
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;	
+}
+
+#cardtextdiv {
+	width: 100%;
+	height: 100%;
+	display: block;
+	text-align: center;	
+	vertical-align: middle;	
+}
+
+#cardtext {
+	width: 100%;
+	height: 60%;
+	display:inline-block; 	
+	text-align: center;
+	font-family: "Muli", Helvetica, Arial;
+	font-weight: bold;
+	font-size: 200px;	
+	white-space: nowrap;	
+	position: absolute;
+	visibility: hidden;
+	transform:translate(-50%,-50%); 
+	-webkit-transform:translate(-50%,-50%); 
+    top: 50%;
+    left: 50%;
+}
+
+#cardimagediv {
+	position: absolute;
+	visibility: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+#cardimage {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: middle;
+}
+
+a {
+	text-decoration: none;
+	color: #090909;
+}

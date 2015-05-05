@@ -1,0 +1,25 @@
+all gone	first-words/all-gone.jpg	first-words/all-gone.mp3
+baby	first-words/baby.jpg	first-words/baby.mp3
+ball	first-words/ball.jpg	first-words/ball.mp3
+banana	first-words/banana.jpg	first-words/banana.mp3
+bath	first-words/bath.jpg	first-words/bath.mp3
+book	first-words/book.jpg	first-words/book.mp3
+bye	first-words/bye.jpg	first-words/bye.mp3
+car	first-words/car.jpg	first-words/car.mp3
+cat	first-words/cat.jpg	first-words/cat.mp3
+cookie	first-words/cookie.jpg	first-words/cookie.mp3
+daddy	first-words/daddy.jpg	first-words/daddy.mp3
+dog	first-words/dog.jpg	first-words/dog.mp3
+eye 	first-words/eye.jpg 	first-words/eye.mp3 
+hat	first-words/hat.jpg	first-words/hat.mp3
+hi	first-words/hi.jpg	first-words/hi.mp3
+hot	first-words/hot.jpg	first-words/hot.mp3
+juice	first-words/juice.jpg	first-words/juice.mp3
+mama	first-words/mama.jpg	first-words/mama.mp3
+milk	first-words/milk.jpg	first-words/milk.mp3
+more	first-words/more.jpg	first-words/more.mp3
+no	first-words/no.jpg	first-words/no.mp3
+nose	first-words/nose.jpg	first-words/nose.mp3
+shoes	first-words/shoes.jpg	first-words/shoes.mp3
+thank you	first-words/thank-you.jpg	first-words/thank-you.mp3
+yes	first-words/yes.jpg	first-words/yes.mp3

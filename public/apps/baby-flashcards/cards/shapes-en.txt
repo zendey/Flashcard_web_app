@@ -1,0 +1,9 @@
+circle	shapes/circle.jpg	shapes/circle.mp3
+crescent	shapes/crescent.jpg	shapes/crescent.mp3
+diamond	shapes/diamond.jpg	shapes/diamond.mp3
+heart	shapes/heart.jpg	shapes/heart.mp3
+oval	shapes/oval.jpg	shapes/oval.mp3
+rectangle	shapes/rectangle.jpg	shapes/rectangle.mp3
+square	shapes/square.jpg	shapes/square.mp3
+star	shapes/star.jpg	shapes/star.mp3
+triangle	shapes/triangle.jpg	shapes/triangle.mp3

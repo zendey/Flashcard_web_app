@@ -1,0 +1,4 @@
+daddy	d-sounds/daddy.jpg	d-sounds/daddy.mp3
+deer	d-sounds/deer.jpg	d-sounds/deer.mp3
+dog	d-sounds/dog.jpg	d-sounds/dog.mp3
+duck	d-sounds/duck.jpg	d-sounds/duck.mp3

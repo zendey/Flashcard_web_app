@@ -1,0 +1,13 @@
+baby	b-sounds/baby.jpg	b-sounds/baby.mp3
+ball	b-sounds/ball.jpg	b-sounds/ball.mp3
+banana	b-sounds/banana.jpg	b-sounds/banana.mp3
+bath	b-sounds/bath.jpg	b-sounds/bath.mp3
+bike	b-sounds/bike.jpg	b-sounds/bike.mp3
+boat	b-sounds/boat.jpg	b-sounds/boat.mp3
+book	b-sounds/book.jpg	b-sounds/book.mp3
+bread	b-sounds/bread.jpg	b-sounds/bread.mp3
+brother	b-sounds/brother.jpg	b-sounds/brother.mp3
+bug	b-sounds/bug.jpg	b-sounds/bug.mp3
+bus	b-sounds/bus.jpg	b-sounds/bus.mp3
+butterfly	b-sounds/butterfly.jpg	b-sounds/butterfly.mp3
+bye	b-sounds/bye.jpg	b-sounds/bye.mp3

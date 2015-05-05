@@ -1,0 +1,12 @@
+black	colors/black.jpg	colors/black.mp3
+blue	colors/blue.jpg	colors/blue.mp3
+brown	colors/brown.jpg	colors/brown.mp3
+green	colors/green.jpg	colors/green.mp3
+grey	colors/grey.jpg	colors/grey.mp3
+orange	colors/orange.jpg	colors/orange.mp3
+pink	colors/pink.jpg	colors/pink.mp3
+purple	colors/purple.jpg	colors/purple.mp3
+red	colors/red.jpg	colors/red.mp3
+violet	colors/violet.jpg	colors/violet.mp3
+white	colors/white.jpg	colors/white.mp3
+yellow	colors/yellow.jpg	colors/yellow.mp3
