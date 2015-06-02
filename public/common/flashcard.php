@@ -1,7 +1,7 @@
 <?php
 
-	require( "../common/input-validation.php" );
-	require( "../classes/Database.php" );
+	require( "../common/input_validation.php" );
+	require( "../common/database.php" );
 
 	$sql = "select app_directory, deck_file
 		from deck, app_deck, app
@@ -10,13 +10,12 @@
 		app_deck.deck_id = " . sanitize_data( $_GET[ "deck_id" ] ) . "
 		order by deck.deck_id desc";
 
-	$result = $mysqli->query( $sql );
-	$column = 0;
-	
-	$row = $result->fetch_assoc();
+	$result = $database -> fetch( $sql );		
 
-	$carddirectory = "../apps/"  . $row[ "app_directory" ] . "/cards/";
-	$cardfilepath = $carddirectory . $row[ "deck_file" ];
+	$column = 0;
+
+	$carddirectory = "../apps/"  . $result [ 0 ][ "app_directory" ] . "/cards/";
+	$cardfilepath = $carddirectory .  $result [ 0 ][ "deck_file" ];
 	$cardfile = fopen( $cardfilepath, "r" ) or die( "Unable to open file!" );
 	$cardnumber = 0;
 	
@@ -34,7 +33,6 @@
 	// Change order of the cards in the deck to random.
 	shuffle( $cardarray );
 	foreach ( $cardarray as $cardelement ) {
-		//echo $cardelement[ 0 ] . "<br />";
 		$cardtextarray .= "'" . $cardelement[ 0 ] . "', ";
 		$cardimagearray .= "'" . $cardelement[ 1 ] . "', ";
 		$cardsoundarray .= "'" . $cardelement[ 2 ] . "', ";

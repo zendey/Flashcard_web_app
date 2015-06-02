@@ -8,10 +8,6 @@
 
 <body>
 
-<!--div class="top-bar">
-	<span class="top-menu">&nbsp;</span>
-</div-->
-
 <div align="center">
 	<p>&nbsp;</p>
 	<h1>Please choose a category:</h1>
@@ -20,8 +16,8 @@
 	<div>
 
 		<?php
-		require( "../classes/Database.php" );
-		require( "../common/input-validation.php" );
+		require( "../common/database.php" );
+		require( "../common/input_validation.php" );
 
 		if ( empty( $_GET[ "app_id" ] ) ){
 			$app_id = 3;
@@ -36,29 +32,25 @@
 			app_deck.app_id = " . $app_id . "
 			order by app_deck.app_deck_order asc";
 
-			$column = 0;
-
-			echo "<table><tr>";
-			if ( $result = $mysqli->query( $sql ) ) {
-				while ( $row = $result->fetch_array() ) {
-
-					echo "<td class='normal-text' align='center'>";
-					echo "<a href='../screens/card.php?app_id=" . $app_id . "&deck_id=" . $row[ "deck_id" ] . "'>";
-					echo "<img src='../apps/"  . $row[ "app_directory" ] . "/cards/" . $row[ "deck_directory" ] . "/" . $row[ "deck_image" ] . "' width='300'>";
-					echo "</a><br />";
-					echo "<strong>" . $row[ "deck_name" ] . "</strong><br />";
-					echo "</td>";
-					if ( $column == 2 ){
-						echo "</tr><tr>";
-					}
-					$column++;
-				}
-				mysqli_free_result( $result );
-			}
-			mysqli_close( $mysqli );
-			
-			echo "</tr></table>";
-		?>
+	$result = $database -> fetch( $sql );
+	
+	$column = 0;
+	echo "<table><tr>";
+	foreach ( $result as $key => $value ){
+		echo "<td class='normal-text' align='center'>";
+		echo "<a href='../screens/card.php?app_id=" . $app_id . "&deck_id=" . $result[ $key ][ "deck_id" ] . "'>";
+		echo "<img src='../apps/"  . $result[ $key ][ "app_directory" ] . "/cards/" . $result[ $key ][ "deck_directory" ] . "/" . $result[ $key ][ "deck_image" ] . "' width='300'>";
+		echo "</a><br />";
+		echo "<strong>" . $result[ $key ][ "deck_name" ] . "</strong><br />";
+		echo "</td>";
+		if ( $column == 2 ){
+			echo "</tr><tr>";
+		}
+		$column++;
+	}
+	echo "</tr></table>";
+	
+?>
 	</div>
 </div>
 <?php include( "footer.php" ); ?>	

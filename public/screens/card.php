@@ -6,16 +6,11 @@
 	<link rel="stylesheet" href="../css/card.css" type="text/css">
 	<script src="../js/flashcard.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
-	<!--script src="../js/jquery-1.11.2.min.js"></script-->
 </head>	
 <body onload="initializecard();">
 
 <div id="cardmain">
 	<?php require( "../common/flashcard.php" ); ?>
-
-	<!--div class="top-bar">
-		<span class="top-menu"><a href="deck.php?app_id=<?=sanitize_data( $_GET[ "app_id" ] );?>&deck_id=<?=sanitize_data( $_GET[ "deck_id" ] );?>">Back</a>&nbsp;</span>
-	</div-->
 
 	<script>
 		var carddirectory = "<?php echo $carddirectory; ?>";

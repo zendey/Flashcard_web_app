@@ -14,7 +14,7 @@ A simple flashcards web application written in JavaScript, PHP and mySQL.
   - Unzip the file to your desktop.
   
  - Import and populate the database.
-  - Import sql/flashcards.sql into your mySQL database.
+  - Import src/sql/flashcards.sql into your mySQL database.
  
  - Upload the files to your server.
 
