@@ -5,7 +5,7 @@
 	transform-style: preserve-3d;	
 }
 
-#cardtextdiv {
+#card_text_div {
 	width: 100%;
 	height: 100%;
 	display: block;
@@ -13,7 +13,7 @@
 	vertical-align: middle;	
 }
 
-#cardtext {
+#card_text {
 	width: 100%;
 	height: 60%;
 	display:inline-block; 	
@@ -30,14 +30,14 @@
     left: 50%;
 }
 
-#cardimagediv {
+#card_image_div {
 	position: absolute;
 	visibility: hidden;
 	width: 100%;
 	height: 100%;
 }
 
-#cardimage {
+#card_image {
 	position: absolute;
 	width: 100%;
 	height: 100%;

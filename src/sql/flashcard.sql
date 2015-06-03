@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 05, 2015 at 11:19 PM
+-- Generation Time: Jun 03, 2015 at 05:11 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `flashcards`
+-- Database: `flashcard`
 --
 
 -- --------------------------------------------------------
@@ -28,11 +28,11 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `app` (
   `app_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `app_name` varchar(255) NOT NULL,
-  `app_short_description` varchar(255) NOT NULL,
-  `app_long_description` tinytext NOT NULL,
-  `app_directory` varchar(255) NOT NULL,
-  `app_image` varchar(255) NOT NULL,
+  `app_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `app_short_description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `app_long_description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `app_directory` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `app_image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `site_id` int(10) unsigned NOT NULL,
   `app_order` int(10) unsigned NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `app` (
   PRIMARY KEY (`app_id`),
   UNIQUE KEY `app_id` (`app_id`),
   KEY `app_id_2` (`app_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `app`
@@ -50,8 +50,8 @@ CREATE TABLE IF NOT EXISTS `app` (
 INSERT INTO `app` (`app_id`, `app_name`, `app_short_description`, `app_long_description`, `app_directory`, `app_image`, `site_id`, `app_order`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 'My app', '', '', '', '', 0, 0, '0000-00-00 00:00:00', '2015-03-21 19:10:46', '0000-00-00 00:00:00'),
 (2, 'Sample app', '', '', '', '', 0, 0, '0000-00-00 00:00:00', '2015-03-21 19:10:46', '0000-00-00 00:00:00'),
-(3, 'First Words', '', '', 'first-words', 'icons/Icon-xxhdpi.png', 1, 2, '0000-00-00 00:00:00', '2015-04-07 17:35:55', '0000-00-00 00:00:00'),
-(4, 'Baby Flashcards', '', '', 'baby-flashcards', 'icons/Icon-xxhdpi.png', 1, 1, '0000-00-00 00:00:00', '2015-04-07 17:35:45', '0000-00-00 00:00:00');
+(3, 'First Words', '', '', 'first_words', 'icon/Icon-xxhdpi.png', 1, 2, '0000-00-00 00:00:00', '2015-04-07 17:35:55', '0000-00-00 00:00:00'),
+(4, 'Baby Flashcards', '', '', 'baby_flashcards', 'icon/Icon-xxhdpi.png', 1, 1, '0000-00-00 00:00:00', '2015-04-07 17:35:45', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `app_deck` (
   PRIMARY KEY (`app_deck_id`),
   UNIQUE KEY `app_deck_id` (`app_deck_id`),
   KEY `app_deck_id_2` (`app_deck_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=13 ;
 
 --
 -- Dumping data for table `app_deck`
@@ -98,19 +98,19 @@ INSERT INTO `app_deck` (`app_deck_id`, `app_id`, `deck_id`, `app_deck_order`, `c
 
 CREATE TABLE IF NOT EXISTS `deck` (
   `deck_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `deck_name` varchar(255) NOT NULL,
-  `deck_short_description` varchar(255) NOT NULL,
-  `deck_long_description` tinytext NOT NULL,
-  `deck_directory` varchar(255) NOT NULL,
-  `deck_file` varchar(255) NOT NULL,
-  `deck_image` varchar(255) NOT NULL,
+  `deck_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `deck_short_description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `deck_long_description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `deck_directory` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `deck_file` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `deck_image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `deck_date_created` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `deck_date_modified` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `deleted_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`deck_id`),
   UNIQUE KEY `deck_id` (`deck_id`),
   KEY `deck_id_2` (`deck_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=13 ;
 
 --
 -- Dumping data for table `deck`
@@ -133,47 +133,14 @@ INSERT INTO `deck` (`deck_id`, `deck_name`, `deck_short_description`, `deck_long
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
---
-
-CREATE TABLE IF NOT EXISTS `migrations` (
-  `migration` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `batch` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `migrations`
---
-
-INSERT INTO `migrations` (`migration`, `batch`) VALUES
-('2014_10_12_000000_create_users_table', 1),
-('2014_10_12_100000_create_password_resets_table', 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `password_resets`
---
-
-CREATE TABLE IF NOT EXISTS `password_resets` (
-  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  KEY `password_resets_email_index` (`email`),
-  KEY `password_resets_token_index` (`token`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `site`
 --
 
 CREATE TABLE IF NOT EXISTS `site` (
   `site_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `site_name` varchar(255) NOT NULL,
-  `site_short_description` varchar(255) NOT NULL,
-  `site_long_description` tinytext NOT NULL,
+  `site_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `site_short_description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `site_long_description` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `site_order` int(10) unsigned NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -182,7 +149,7 @@ CREATE TABLE IF NOT EXISTS `site` (
   UNIQUE KEY `site_id` (`site_id`),
   KEY `site_id_2` (`site_id`),
   KEY `site_id_3` (`site_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `site`
@@ -192,45 +159,6 @@ INSERT INTO `site` (`site_id`, `site_name`, `site_short_description`, `site_long
 (1, 'Zendey Baby', 'Flashcards for babies and toddlers!', 'Flashcards for babies and toddlers!', 1, '0000-00-00 00:00:00', '2015-04-07 16:47:20', '0000-00-00 00:00:00'),
 (2, 'Zendey Kids', 'Flashcards for kids!', 'Flashcards for kids!', 2, '0000-00-00 00:00:00', '2015-04-07 16:47:33', '0000-00-00 00:00:00'),
 (3, 'Zendey', 'Zendey flashcards!', 'Zendey flashcards!', 3, '0000-00-00 00:00:00', '2015-04-07 16:47:43', '0000-00-00 00:00:00');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
-
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
-  `remember_token` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `deleted_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `users_email_unique` (`email`),
-  KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `user_type`
---
-
-CREATE TABLE IF NOT EXISTS `user_type` (
-  `id` tinyint(4) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `deleted_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `user_type_id` (`id`),
-  KEY `id` (`id`),
-  KEY `id_2` (`id`),
-  KEY `id_3` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

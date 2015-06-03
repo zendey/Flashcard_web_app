@@ -14,28 +14,28 @@
 
 	$column = 0;
 
-	$carddirectory = "../apps/"  . $result [ 0 ][ "app_directory" ] . "/cards/";
-	$cardfilepath = $carddirectory .  $result [ 0 ][ "deck_file" ];
-	$cardfile = fopen( $cardfilepath, "r" ) or die( "Unable to open file!" );
-	$cardnumber = 0;
+	$card_directory = "../app/"  . $result [ 0 ][ "app_directory" ] . "/card/";
+	$card_file_path = $card_directory .  $result [ 0 ][ "deck_file" ];
+	$card_file = fopen( $card_file_path, "r" ) or die( "Unable to open file!" );
+	$card_number = 0;
 	
-	$cardtextarray = "";
-	$cardimagearray = "";
-	$cardsoundarray = "";	
+	$card_text_array = "";
+	$card_image_array = "";
+	$card_sound_array = "";	
 	
-	while( !feof( $cardfile )) {
-		$cardline = fgets( $cardfile );
-		$cardarray[ $cardnumber ] = str_getcsv( $cardline, "\t" );
-		$cardnumber++;	
+	while( !feof( $card_file )) {
+		$card_line = fgets( $card_file );
+		$card_array[ $card_number ] = str_getcsv( $card_line, "\t" );
+		$card_number++;
 	}
-	fclose( $cardfile );
+	fclose( $card_file );
 	
 	// Change order of the cards in the deck to random.
-	shuffle( $cardarray );
-	foreach ( $cardarray as $cardelement ) {
-		$cardtextarray .= "'" . $cardelement[ 0 ] . "', ";
-		$cardimagearray .= "'" . $cardelement[ 1 ] . "', ";
-		$cardsoundarray .= "'" . $cardelement[ 2 ] . "', ";
+	shuffle( $card_array );
+	foreach ( $card_array as $card_element ) {
+		$card_text_array .= "'" . $card_element[ 0 ] . "', ";
+		$card_image_array .= "'" . $card_element[ 1 ] . "', ";
+		$card_sound_array .= "'" . $card_element[ 2 ] . "', ";
 	}
 	
 ?>

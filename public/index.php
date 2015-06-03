@@ -1,3 +1,3 @@
 <?php 
-	header( "Location: screens/app.php" );
+	header( "Location: screen/app.php" );
 ?>

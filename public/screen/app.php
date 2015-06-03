@@ -3,7 +3,7 @@
 	<title>Zendey Flashcards Free</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" href="../css/style.css" type="text/css">
-	<link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+	<link href="http://fonts.googleapis.com/css?family=Muli" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -31,8 +31,8 @@
 	$result = $database -> fetch( $sql );
 	
 	foreach ( $result as $key => $value ){
-		echo "<a href='../screens/deck.php?app_id=" . $result[ $key ][ "app_id" ] . "'>";
-		echo "<img src='../apps/" . $result[ $key ][ "app_directory" ] . "/" . $result[ $key ][ "app_image" ] . "'>";
+		echo "<a href='../screen/deck.php?app_id=" . $result[ $key ][ "app_id" ] . "'>";
+		echo "<img src='../app/" . $result[ $key ][ "app_directory" ] . "/" . $result[ $key ][ "app_image" ] . "'>";
 		echo "</a>";
 	}
 

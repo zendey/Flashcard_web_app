@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <head>
-	<title>Baby and Toddler Flashcards Free</title>
+	<title>Flashcards</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" href="../css/style.css" type="text/css">
-	<link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+	<link href="http://fonts.googleapis.com/css?family=Muli" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -37,9 +37,9 @@
 	$column = 0;
 	echo "<table><tr>";
 	foreach ( $result as $key => $value ){
-		echo "<td class='normal-text' align='center'>";
-		echo "<a href='../screens/card.php?app_id=" . $app_id . "&deck_id=" . $result[ $key ][ "deck_id" ] . "'>";
-		echo "<img src='../apps/"  . $result[ $key ][ "app_directory" ] . "/cards/" . $result[ $key ][ "deck_directory" ] . "/" . $result[ $key ][ "deck_image" ] . "' width='300'>";
+		echo "<td class='normal_text' align='center'>";
+		echo "<a href='../screen/card.php?app_id=" . $app_id . "&deck_id=" . $result[ $key ][ "deck_id" ] . "'>";
+		echo "<img src='../app/"  . $result[ $key ][ "app_directory" ] . "/card/" . $result[ $key ][ "deck_directory" ] . "/" . $result[ $key ][ "deck_image" ] . "' width='300'>";
 		echo "</a><br />";
 		echo "<strong>" . $result[ $key ][ "deck_name" ] . "</strong><br />";
 		echo "</td>";
