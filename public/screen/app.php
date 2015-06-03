@@ -25,10 +25,10 @@
 	}
 
 	$sql = "select * from app 
-		where site_id = " . $site_id . " 
+		where site_id = :site_id
 		order by app_order asc";
-	
-	$result = $database -> fetch( $sql );
+	$option[ "parameter" ] = [ ":site_id" => $site_id ];
+	$result = $database -> fetch( $sql, $option );
 	
 	foreach ( $result as $key => $value ){
 		echo "<a href='../screen/deck.php?app_id=" . $result[ $key ][ "app_id" ] . "'>";

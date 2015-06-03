@@ -7,10 +7,10 @@
 		from deck, app_deck, app
 		where deck.deck_id = app_deck.deck_id and
 		app.app_id = app_deck.app_id and
-		app_deck.deck_id = " . sanitize_data( $_GET[ "deck_id" ] ) . "
+		app_deck.deck_id = :deck_id
 		order by deck.deck_id desc";
-
-	$result = $database -> fetch( $sql );		
+	$option[ "parameter" ] = [ ":deck_id" => sanitize_data( $_GET[ "deck_id" ] ) ];
+	$result = $database -> fetch( $sql, $option );	
 
 	$column = 0;
 

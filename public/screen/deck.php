@@ -29,10 +29,10 @@
 			from deck, app_deck, app
 			where deck.deck_id = app_deck.deck_id and
 			app.app_id = app_deck.app_id and
-			app_deck.app_id = " . $app_id . "
+			app_deck.app_id = :app_id
 			order by app_deck.app_deck_order asc";
-
-	$result = $database -> fetch( $sql );
+	$option[ "parameter" ] = [ ":app_id" => $app_id ];
+	$result = $database -> fetch( $sql, $option );
 	
 	$column = 0;
 	echo "<table><tr>";
